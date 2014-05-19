@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="domain.core.webservice">
+
+<!-- 登陆信息-->
+	<class name="LoginInfo" table="LoginInfo" >
+		<id column="UserID" name="strUserID" type="java.lang.String">
+		</id>
+		<property column="Password" name="strPassword" type="java.lang.String" />
+		<!-- <bag name="listWeibo_User_AppInfo" table="T_MB_User_AppInfo" cascade="all">
+			<key column="UserID" />
+		</bag> -->
+		
+		 
+	</class>
+	
+</hibernate-mapping>
