@@ -15,7 +15,31 @@
  <constant name="struts.multipart.maxSize" value="55000000"/> 
  <constant name="struts.enable.DynamicMethodInvocation" value="true" />
  <constant name="struts.url.includeParams" value="none" />   -->
+<package name="Myproject-default" namespace="/" extends="struts-default">
+<interceptors>
+			<interceptor name="authentication" class="ui.interceptor.common.AuthenticationInterceptor" />
+			<interceptor-stack name="user">
+				<interceptor-ref name="authentication" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+			<interceptor-stack name="guest">
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+			
+	</interceptors>  
+		<!---->
+		<!-- 没有特殊指明拦截器的action,默认使用user拦截器stack -->
+		<default-interceptor-ref name="user"/> 
+	  
+	  <global-results>  
+		<result name="toLoginPage">login.jsp</result>
+		<result name="unhandledException">index.jsp</result>  
+	</global-results>
 	
+	<!--<global-exception-mappings>  
+		<exception-mapping exception="java.lang.Exception" result="unhandledException"/> 
+	</global-exception-mappings> -->
+</package>	
 
 <package name="index" namespace="/" extends="struts-default">  
         <action name="index">  
