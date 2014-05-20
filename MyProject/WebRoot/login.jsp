@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="/resources/taglibs.jsp"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -34,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a> </div>
   <!-- End #logn-top -->
   <div id="login-content">
-    <form action="#">
+   <s:form action="login" namespace="/weiboMgr" method="post" id="role">
       <p>
         <label>用户名</label>
         <input class="text-input" type="text" />
@@ -52,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <p>
         <input class="button" type="submit" value="登录" />
       </p>
-    </form>
+    </s:form>
   </div>
   <!-- End #login-content -->
 </div>
