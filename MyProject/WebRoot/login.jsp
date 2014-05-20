@@ -35,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a> </div>
   <!-- End #logn-top -->
   <div id="login-content">
-   <s:form action="login" namespace="/weiboMgr" method="post" id="role">
+   <form action="login" namespace="/weibo" method="post" id="role">
       <p>
         <label>用户名</label>
         <input class="text-input" type="text" />
@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <p>
         <input class="button" type="submit" value="登录" />
       </p>
-    </s:form>
+    </form>
   </div>
   <!-- End #login-content -->
 </div>
